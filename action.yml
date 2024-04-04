@@ -1,0 +1,15 @@
+name: Analyze with CodeQL
+description: An opinionated action that is used to initialize CodeQL.
+inputs:
+  languages:
+    description: A comma-separated list of CodeQL languages to analyze. Default is csharp.
+    required: true
+    default: 'csharp'
+runs:
+  using: composite
+  steps:
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@main
+      with:
+        languages: ${{ inputs.languages }}
+        build-mode: manual
