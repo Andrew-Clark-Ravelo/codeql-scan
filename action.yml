@@ -13,3 +13,6 @@ runs:
       with:
         languages: ${{ inputs.languages }}
         build-mode: manual
+branding:
+  icon: 'umbrella'
+  color: 'blue'
